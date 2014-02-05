@@ -1,0 +1,12 @@
+Source: ros-hydro-libfovis
+Section: misc
+Priority: extra
+Maintainer: Pep Lluis Negre <pl.negre@uib.cat>
+Build-Depends: debhelper (>= 7.0.50~), libeigen3-dev, ros-hydro-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-hydro-libfovis
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, ros-hydro-catkin
+Description: Fast Odometry from VISion
