@@ -1,3 +1,24 @@
+## libfovis (indigo) - 0.0.6-0
+
+The packages in the `libfovis` repository were released into the `indigo` distro by running `/usr/bin/bloom-release libfovis --track indigo --rosdistro indigo` on `Mon, 01 Sep 2014 08:15:50 -0000`
+
+The `libfovis` package was released.
+
+Version of package(s) in repository `libfovis`:
+- upstream repository: https://github.com/srv/libfovis.git
+- release repository: https://github.com/srv/libfovis-release.git
+- rosdistro version: `0.0.5-0`
+- old version: `0.0.5-0`
+- new version: `0.0.6-0`
+
+Versions of tools used:
+- bloom version: `0.5.11`
+- catkin_pkg version: `0.2.4`
+- rosdep version: `0.10.30`
+- rosdistro version: `0.3.5`
+- vcstools version: `0.1.35`
+
+
 ## libfovis (indigo) - 0.0.5-0
 
 The packages in the `libfovis` repository were released into the `indigo` distro by running `/usr/bin/bloom-release libfovis --track indigo --rosdistro indigo --new-track` on `Thu, 28 Aug 2014 10:50:21 -0000`
