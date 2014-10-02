@@ -3,7 +3,11 @@
 
 #include "pyramid_level.hpp"
 
-#ifdef FOVIS_USE_SSE
+#ifndef USE_SSE
+#define USE_SSE
+#endif
+
+#ifdef USE_SSE
 #include <emmintrin.h>
 #endif
 
@@ -12,7 +16,7 @@ namespace fovis
 
 static inline int dot_int16_aligned(const int16_t* a, const int16_t* b, int num_taps)
 {
-#ifdef FOVIS_USE_SSE
+#ifdef USE_SSE
   assert(FOVIS_IS_ALIGNED16(a) && FOVIS_IS_ALIGNED16(b));
   const int16_t* ap = a;
   const int16_t* bp = b;

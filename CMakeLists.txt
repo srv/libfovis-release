@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(libfovis)
 
-find_package(catkin REQUIRED cmake_modules)
+find_package(catkin REQUIRED)
 
 find_package(Eigen REQUIRED)
 include_directories(${EIGEN_INCLUDE_DIRS})
@@ -9,7 +9,7 @@ add_definitions(${EIGEN_DEFINITIONS})
 
 catkin_package(
   INCLUDE_DIRS libfovis
-  LIBRARIES fovis
+  LIBRARIES libfovis
 )
 
 add_definitions(-Wall -msse2 -msse3)
@@ -18,7 +18,7 @@ include_directories(libfovis
   ${catkin_INCLUDE_DIRS}
 )
 
-add_library(fovis
+add_library(libfovis
     libfovis/frame.cpp
     libfovis/visual_odometry.cpp
     libfovis/fast.cpp
@@ -38,20 +38,7 @@ add_library(fovis
     libfovis/depth_image.cpp
     libfovis/rectification.cpp
     libfovis/stereo_rectify.cpp
-    libfovis/stereo_calibration.cpp
     libfovis/internal_utils.cpp
     libfovis/normalize_image.cpp)
 
-set_target_properties(fovis PROPERTIES SOVERSION 1)
-
-install(TARGETS fovis
-    ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-    LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-
-install(DIRECTORY ${PROJECT_NAME}/
-    DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-    FILES_MATCHING PATTERN "*.h*"
-    PATTERN ".git" EXCLUDE
-)
+set_target_properties(libfovis PROPERTIES SOVERSION 1)

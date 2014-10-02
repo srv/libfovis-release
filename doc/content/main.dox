@@ -15,14 +15,10 @@ Int. Symposium on Robotics Research (ISRR), Flagstaff, Arizona, USA, Aug. 2011
 
 \section build_requirements Build requirements
 
-Fovis is intended to be relatively portable.  There is one major requirement
+Fovis is intended to be relatively portable.  There are two major requirements
 for building and using the software:
 \li <a href="http://eigen.tuxfamily.org">Eigen 3</a>
-
-\subsection build_requirements_sse Intel SSE
-
-By default, Fovis is configured to use the Intel SSE2 and SSE3 instruction set.
-You can disable this support via a build-time option (use cmake -DUSE_SSE=OFF)
+\li A CPU supporting Intel SSE2.
 
 \section usage_requirements Usage requirements
 
